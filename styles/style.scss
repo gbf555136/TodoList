@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #3f87a6, #ebf8e1, #f69d3c);
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  h1 {
+    font-size: 2.5rem;
+    color: rgb(101, 148, 110);
+  }
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  input {
+    font-size: 1.5rem;
+    margin: 0.5rem 0.3rem;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    &[type="number"] {
+      width: 3rem;
+    }
+  }
+  button {
+    font-size: 1.5rem;
+    margin: 0.5rem 0.3rem;
+    background-color: rgb(54, 190, 214);
+    cursor: pointer;
+    border: none;
+    padding: 0.1rem 1rem;
+  }
+
+  //hide num arrow
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+  button {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    background-color: rgb(54, 83, 214);
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0 2rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .n_div {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
+    margin: 0.3rem 0rem;
+    p {
+      font-size: 1.5rem;
+      background-color: white;
+      border: none;
+      padding: 0.5rem;
+      text-align: center;
+      word-wrap: break-word;
+    }
+    .n_todo {
+      width: 50%;
+    }
+    .n_date {
+      width: 20%;
+    }
+    button {
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: white;
+    }
+    .ck_btn {
+      background: green;
+    }
+    .gb_btn {
+      background: purple;
+    }
+  }
+  div.checked {
+    opacity: 0.6;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.3rem;
+  }
+}
+
+i {
+  pointer-events: none;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
